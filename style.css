@@ -18,8 +18,7 @@ body {
 }
 
 nav {
-  /* background-color: #b0e9ff */
-  color: #000;
+  color: #051937;
   position: fixed;
   top: 0;
   width: 100%;
@@ -51,7 +50,7 @@ nav h1 {
   padding: 5px 10px;
   border-radius: 5px;
   text-decoration: none;
-  color: #000;
+  color: #051937;
   transition: background 0.5s;
 }
 
@@ -85,7 +84,9 @@ main {
 }
 
 .weather h1 {
+  color: #051937;
   font-size: 3.5rem;
+  font-weight: 800;
   margin-bottom: 50px;
 }
 
@@ -99,13 +100,50 @@ main {
 }
 
 .weather_info {
+  color: #051937;
   min-height: 250px;
+  position: relative;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  overflow: hidden;
+}
+
+.icon {
+    font-size: 5.5rem;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.layer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  overflow: hidden;
+  transition: height 0.5s;
+}
+
+.layer h2{
+    font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.weather_info:hover .layer{
+    height: 100%;
 }

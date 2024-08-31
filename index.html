@@ -1,58 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Dhanush_R">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Dhanush_R" />
 
     <title>Weather App</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
-
     <header>
-        <nav>
-            <h1>Weather App</h1>
-            <div class="search_bar">
-                <input type="text" id="searchInput" placeholder="Search location...">
-                <button class="btn">Search</button>
-            </div>
-        </nav>
+      <nav>
+        <h1>Weather App</h1>
+        <div class="search_bar">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search location..."
+          />
+          <button class="btn">Search</button>
+        </div>
+      </nav>
     </header>
 
     <main>
-        <section class="weather">
-            <h1 id="location_name">Your Location</h1>
-            <img id="icon" src="" alt="Weather Icon">
-            
-            <div class="info_container">
+      <section class="weather">
+        <h1 id="location_name">Your Location</h1>
+        <img id="weather_icon" src="" alt="Weather Icon" />
 
-                <article class="weather_info" id="temperature_Box">
-                    <h2>Temperature</h2>
-                    <p>Actual: <span id="temp"></span>°C</p>
-                    <p>Min: <span id="minTemp"></span>°C</p>
-                    <p>Max: <span id="maxTemp"></span>°C</p>
-                </article>
-    
-                <article class="weather_info" id="humidity_Box">
-                    <h2>Humidity</h2>
-                    <p>Humidity: <span id="humidity"></span>%</p>
-                    <p>Dew Point: <span id="dewPoint"></span>°C</p>
-                    <p>Pressure: <span id="pressure"></span> hPa</p>
-                </article>
-    
-                <article class="weather_info" id="wind_Box">
-                    <h2>Wind</h2>
-                    <p>Speed: <span id="windSpeed"></span> m/s</p>
-                    <p>Direction: <span id="windDirection"></span>°</p>
-                </article>
-                
+        <div class="info_container">
+          <article class="weather_info" id="temperature_Box">
+            <div class="icon"><i class="fa-solid fa-temperature-three-quarters"></i></div>
+            
+            <div class="layer">
+              <h2>Temperature</h2>
+              <p>Actual: <span id="temp"></span>°C</p>
+              <p>Min: <span id="minTemp"></span>°C</p>
+              <p>Max: <span id="maxTemp"></span>°C</p>
             </div>
-            
-        </section>
-    </main>
+          </article>
 
+          <article class="weather_info" id="humidity_Box">
+            <div class="icon"><i class="fa-solid fa-droplet"></i></div>
+            
+            <div class="layer">
+              <h2>Humidity</h2>
+              <p>Humidity: <span id="humidity"></span>%</p>
+              <p>Dew Point: <span id="dewPoint"></span>°C</p>
+              <p>Pressure: <span id="pressure"></span> hPa</p>
+            </div>
+          </article>
+
+          <article class="weather_info" id="wind_Box">
+            <div class="icon"><i class="fa-solid fa-wind"></i></div>
+            
+            <div class="layer">
+              <h2>Wind</h2>
+              <p>Speed: <span id="windSpeed"></span> m/s</p>
+              <p>Direction: <span id="windDirection"></span>°</p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
