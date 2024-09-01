@@ -15,18 +15,17 @@ body {
 body {
   display: flex;
   flex-direction: column;
+  
 }
 
 nav {
   color: #051937;
-  position: fixed;
-  top: 0;
+  background:#00bf72;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px;
-  z-index: 10;
 }
 
 nav h1 {
@@ -65,7 +64,7 @@ main {
   display: flex;
   flex-direction: column;
   flex: 1;
-  background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+  background: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
 }
 
 .weather {
@@ -150,4 +149,41 @@ main {
   transition: height 0.5s;
 }
 
+@media screen and (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+  }
 
+  .search_bar {
+    margin-top: 10px;
+    gap: 5px;
+  }
+
+  .info_container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .weather h1 {
+    font-size: 1.8rem;
+  }
+
+  .weather img {
+    width: 90px; 
+  }
+
+  .btn {
+    font-size: 0.875rem; 
+    padding: 5px 8px;
+  }
+
+  .weather_info {
+    padding: 10px;
+  }
+
+  .icon {
+    font-size: 2.5rem;
+  }
+}
