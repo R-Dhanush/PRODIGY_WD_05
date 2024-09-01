@@ -48,6 +48,15 @@ async function fetchweather(city) {
     else if(data.weather[0].main == "Snow"){
       weathericon.src = "img/snow.png";
     }
+
+    const layers = document.querySelectorAll('.layer');
+    layers.forEach(layer => {
+      layer.classList.add('expanded');
+      setTimeout(() => {
+        layer.classList.remove('expanded');
+      }, 5000);
+    });
+
   } catch (error) {
     alert("Please enter a valid city");
     console.error("Error fetching weather data:", error);

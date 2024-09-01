@@ -65,14 +65,7 @@ main {
   display: flex;
   flex-direction: column;
   flex: 1;
-  background-image: linear-gradient(
-    to right top,
-    #051937,
-    #224062,
-    #416c8f,
-    #629cbd,
-    #87ceeb
-  );
+  background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
 }
 
 .weather {
@@ -151,4 +144,10 @@ main {
 .weather_info:hover .layer{
     height: 100%;
 }
+
+.expanded {
+  height: 100%;
+  transition: height 0.5s;
+}
+
 
