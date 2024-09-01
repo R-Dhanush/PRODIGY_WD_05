@@ -29,7 +29,7 @@
             id="searchInput"
             placeholder="Search location..."
           />
-          <button class="btn">Search</button>
+          <button class="btn" onclick="fetchweather()">Search</button>
         </div>
       </nav>
     </header>
@@ -37,7 +37,7 @@
     <main>
       <section class="weather">
         <h1 id="location_name">Your Location</h1>
-        <img id="weather_icon" src="" alt="Weather Icon" />
+        <img id="weather_icon" src="img/clear.png" alt="Weather Icon">
 
         <div class="info_container">
           <article class="weather_info" id="temperature_Box">
@@ -46,8 +46,8 @@
             <div class="layer">
               <h2>Temperature</h2>
               <p>Actual: <span id="temp"></span>°C</p>
-              <p>Min: <span id="minTemp"></span>°C</p>
-              <p>Max: <span id="maxTemp"></span>°C</p>
+              <p>Min: <span id="mintemp"></span>°C</p>
+              <p>Max: <span id="maxtemp"></span>°C</p>
             </div>
           </article>
 
@@ -57,7 +57,7 @@
             <div class="layer">
               <h2>Humidity</h2>
               <p>Humidity: <span id="humidity"></span>%</p>
-              <p>Dew Point: <span id="dewPoint"></span>°C</p>
+              <p>Dew Point: <span id="dewpoint"></span>°C</p>
               <p>Pressure: <span id="pressure"></span> hPa</p>
             </div>
           </article>
@@ -67,12 +67,15 @@
             
             <div class="layer">
               <h2>Wind</h2>
-              <p>Speed: <span id="windSpeed"></span> m/s</p>
-              <p>Direction: <span id="windDirection"></span>°</p>
+              <p>Speed: <span id="windspeed"></span> m/s</p>
+              <p>Direction: <span id="winddirection"></span>°</p>
             </div>
           </article>
         </div>
       </section>
+      
     </main>
+
+    <script src="script.js"></script>
   </body>
 </html>

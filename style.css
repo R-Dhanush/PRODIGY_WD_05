@@ -40,13 +40,13 @@ nav h1 {
 
 .search_bar input {
   padding: 5px;
-  border: 2px solid #00b7ff;
+  border: 2px solid #051937;
   border-radius: 5px;
 }
 
 .btn {
   width: fit-content;
-  border: 2px solid #00b7ff;
+  border: 2px solid #051937;
   padding: 5px 10px;
   border-radius: 5px;
   text-decoration: none;
@@ -55,7 +55,7 @@ nav h1 {
 }
 
 .btn:hover {
-  background: #00b7ff;
+  background: #051937;
   color: #fff;
 }
 
@@ -88,6 +88,10 @@ main {
   font-size: 3.5rem;
   font-weight: 800;
   margin-bottom: 50px;
+}
+
+.weather img{
+  width: 170px;
 }
 
 .info_container {
@@ -147,3 +151,4 @@ main {
 .weather_info:hover .layer{
     height: 100%;
 }
+
