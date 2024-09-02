@@ -105,12 +105,12 @@ main {
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 8px;
+  backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.5);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   position: relative;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   margin: 0 10px;
   overflow: hidden;
 }
@@ -125,13 +125,11 @@ main {
 }
 
 .sunrise_sun {
-  left: 10%;
-  animation: sunriseAnimation 5s linear infinite;
+  animation: sunriseAnimation 10s linear infinite;
 }
 
 .sunset_sun {
-  right: 10%;
-  animation: sunsetAnimation 5s linear infinite;
+  animation: sunsetAnimation 10s linear infinite;
 }
 
 @keyframes sunriseAnimation {
@@ -157,6 +155,7 @@ main {
   font-size: 1rem;
   color: #051937;
   font-weight: 600;
+  z-index: 1;
 }
 
 .info_container {
@@ -253,14 +252,15 @@ main {
   }
 
   .sunrise_sunset_container {
-    padding: 15px; 
-    margin-top: 10px;
     flex-direction: column;
+    align-items: center;
+    padding: 15px;
   }
 
-  .sunrise, .sunset {
+  .sunrise_box, .sunset_box {
     width: 100%;
-    text-align: center;
+    margin: 10px 0;
+    padding: 15px;
   }
 
   .weather_info {
