@@ -248,6 +248,17 @@ main {
     padding: 5px 8px;
   }
 
+  .sunrise_sunset_container {
+    padding: 15px; 
+    margin-top: 10px;
+    flex-direction: column;
+  }
+
+  .sunrise, .sunset {
+    width: 100%;
+    text-align: center;
+  }
+
   .weather_info {
     padding: 10px;
   }
