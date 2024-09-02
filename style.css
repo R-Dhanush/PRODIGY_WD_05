@@ -12,15 +12,20 @@ body {
   height: 100%;
 }
 
+html {
+  background: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 body {
   display: flex;
   flex-direction: column;
-  
 }
 
 nav {
   color: #051937;
-  background:#00bf72;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -64,7 +69,6 @@ main {
   display: flex;
   flex-direction: column;
   flex: 1;
-  background: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
 }
 
 .weather {
@@ -84,6 +88,71 @@ main {
 
 .weather img{
   width: 170px;
+}
+
+.sunrise_sunset_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.sunrise, .sunset {
+  width: 45%;
+  text-align: center;
+  position: relative;
+}
+
+.sun {
+  width: 50px;
+  height: 50px;
+  background-color: yellow;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+}
+
+.sunrise .sun {
+  left: 10%;
+  animation: sunriseAnimation 5s linear infinite;
+}
+
+.sunset .sun {
+  right: 10%;
+  animation: sunsetAnimation 5s linear infinite;
+}
+
+@keyframes sunriseAnimation {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+
+}
+
+@keyframes sunsetAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.sunrise p, .sunset p {
+  margin-top: 60px; 
+  font-size: 1rem;
+  color: #051937;
+  font-weight: 600;
 }
 
 .info_container {
@@ -187,3 +256,4 @@ main {
     font-size: 2.5rem;
   }
 }
+
