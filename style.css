@@ -93,38 +93,43 @@ main {
 .sunrise_sunset_container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
   width: 100%;
   padding: 20px;
   margin-top: 20px;
+}
+
+.sunrise_box, .sunset_box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.5);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  margin: 0 10px;
   overflow: hidden;
 }
 
-.sunrise, .sunset {
-  width: 45%;
-  text-align: center;
-  position: relative;
-}
-
-.sun {
-  width: 50px;
-  height: 50px;
+.sunrise_box .sun, .sunset_box .sun {
+  width: 75px;
+  height: 75px;
   background-color: yellow;
   border-radius: 50%;
   position: absolute;
   bottom: 0;
 }
 
-.sunrise .sun {
+.sunrise_sun {
   left: 10%;
   animation: sunriseAnimation 5s linear infinite;
 }
 
-.sunset .sun {
+.sunset_sun {
   right: 10%;
   animation: sunsetAnimation 5s linear infinite;
 }
@@ -136,7 +141,6 @@ main {
   100% {
     transform: translateY(0);
   }
-
 }
 
 @keyframes sunsetAnimation {
@@ -148,8 +152,8 @@ main {
   }
 }
 
-.sunrise p, .sunset p {
-  margin-top: 60px; 
+.sunrise_box p, .sunset_box p {
+  margin-top: 10px;
   font-size: 1rem;
   color: #051937;
   font-weight: 600;
