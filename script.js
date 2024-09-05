@@ -98,7 +98,7 @@ function displayWeatherData(data) {
       weatherIcon.src = "img/snow.png";
       break;
     default:
-      weatherIcon.src = "";
+      weatherIcon.src = "img/clear.png";
   }
 
 
